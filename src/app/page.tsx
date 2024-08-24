@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import React  from "react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
-import Link from "next/link";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { PinContainer } from "../components/ui/3d-pin";
@@ -44,9 +43,9 @@ export default function Home (): React.JSX.Element {
                 <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4 text-center">
                   <h3 className="text-xl">Kembangkan Bisnismu dengan Sistem Ter-Digitalisasi</h3>
                 </div>
-                <Link href="https:wa.me/6285732398679/?text=Halo, admin. Saya ingin berkonsultasi terkait layanan Innovatech Solusindo." className="bg-black dark:bg-black rounded-full w-fit text-white dark:text-white px-4 py-2 text-sm shadow-xl" target="__blank">
+                <a href="https:wa.me/6285732398679/?text=Halo, admin. Saya ingin berkonsultasi terkait layanan Innovatech Solusindo." className="bg-black dark:bg-black rounded-full w-fit text-white dark:text-white px-4 py-2 text-sm shadow-xl" target="__blank">
                   Hubungi Admin
-                </Link>
+                </a>
               </div>
               
             </div>
