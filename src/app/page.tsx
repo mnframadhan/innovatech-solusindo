@@ -44,9 +44,9 @@ export default function Home (): React.JSX.Element {
                 <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4 text-center">
                   <h3 className="text-xl">Kembangkan Bisnismu dengan Sistem Ter-Digitalisasi</h3>
                 </div>
-                <a href={"https:wa.me/6285732398679/?text=Halo, admin. Saya ingin berkonsultasi terkait layanan Innovatech Solusindo."} className="bg-black dark:bg-black rounded-full w-fit text-white dark:text-white px-4 py-2 text-sm shadow-xl" target="__blank">
+                <button><a href={"https:wa.me/6285732398679/?text=Halo, admin. Saya ingin berkonsultasi terkait layanan Innovatech Solusindo."} className="bg-black dark:bg-black rounded-full w-fit text-white dark:text-white px-4 py-2 text-sm shadow-xl" target="__blank">
                   Hubungi Admin
-                </a>
+                </a></button>
               </div>
               
             </div>
@@ -58,7 +58,7 @@ export default function Home (): React.JSX.Element {
             {stacks.map((stack) => {
               return (
                 <div key={stack} className="max-w-16 flex flex-wrap sm:max-w-24 ">
-                  <Image src={`${stack}.png`} alt={`${stack}`} />
+                  <Image src={`/${stack}.png`} alt={`${stack}`} width={100} height={72} />
                 </div>
               )
             })
