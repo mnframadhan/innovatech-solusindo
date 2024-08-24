@@ -4,22 +4,12 @@ import React  from "react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { SparklesCore } from "@/components/ui/sparkles";
-import { PinContainer } from "../components/ui/3d-pin";
+import { PinContainer } from "@/components/ui/3d-pin";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import Image from "next/image";
-import Link from "next/link";
-import { redirect } from "next/dist/server/api-utils";
 
 export default function Home (): React.JSX.Element {
   
-  function onSubmit() {
-    
-    
-
-
-
-  }
-
   const stacks = ['html', 'css', 'js', 'ts', 'react', 'vite', 'nodejs', 'express', 'postgre', 'mongo', 'redis']
 
   return (
@@ -92,7 +82,7 @@ export function NavbarComp () {
     },
     {
       name: "Hubungi",
-      link: "https:wa.me/6285732398679/?text=Halo, admin. Saya ingin berkonsultasi terkait layanan Innovatech Solusindo.",
+      link: "https://wa.me/6285732398679/?text=Halo, admin. Saya ingin berkonsultasi terkait layanan Innovatech Solusindo.",
       target: "_blank",
       passHref: true,
       
@@ -105,6 +95,7 @@ export function NavbarComp () {
     </div>
   );
 }
+
 export const Content = () => {
   return (
 
