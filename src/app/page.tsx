@@ -9,7 +9,7 @@ import { PinContainer } from "../components/ui/3d-pin";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import Image from "next/image";
 
-export function Home (): React.JSX.Element {
+export default function Home (): React.JSX.Element {
 
   const stacks = ['html', 'css', 'js', 'ts', 'react', 'vite', 'nodejs', 'express', 'postgre', 'mongo', 'redis']
 
@@ -71,7 +71,7 @@ export function Home (): React.JSX.Element {
   );
 }
 
-export const NavbarComp = () => {
+export function NavbarComp () {
   const navItems = [
     {
       name: "Layanan",
