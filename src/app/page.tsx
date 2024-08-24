@@ -13,6 +13,8 @@ import { redirect } from "next/dist/server/api-utils";
 export default function Home (): React.JSX.Element {
   
   function onSubmit() {
+    
+    
 
 
 
@@ -51,7 +53,7 @@ export default function Home (): React.JSX.Element {
                 <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4 text-center">
                   <h3 className="text-xl">Kembangkan Bisnismu dengan Sistem Ter-Digitalisasi</h3>
                 </div>
-                <button><a href="https:wa.me/6285732398679/?text=Halo, admin. Saya ingin berkonsultasi terkait layanan Innovatech Solusindo." className="bg-black dark:bg-black rounded-full w-fit text-white dark:text-white px-4 py-2 text-sm shadow-xl" target="_blank" rel="noopener noreferrer" >
+                <button><a href="https://wa.me/6285732398679/?text=Halo, admin. Saya ingin berkonsultasi terkait layanan Innovatech Solusindo." className="bg-black dark:bg-black rounded-full w-fit text-white dark:text-white px-4 py-2 text-sm shadow-xl" target="_blank" rel="noopener noreferrer" >
                   Hubungi Admin
                 </a></button>
               </div>
