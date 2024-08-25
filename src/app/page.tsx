@@ -37,13 +37,13 @@ export default function Home (): React.JSX.Element {
                 particleColor="#008000"
               />
               <div className="z-50 text-center">
-                <div className="text-3xl md:text-7xl font-bold dark:text-white ">
+                <div className="text-3xl md:text-7xl font-bold text-slate-200 ">
                   Innovatech Solusindo.
                 </div>
-                <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4 text-center">
+                <div className="font-extralight text-xs md:text-4xl py-4 text-center text-slate-200">
                   <h3 className="text-xl">Kembangkan Bisnismu dengan Sistem Ter-Digitalisasi</h3>
                 </div>
-                <button><a href="https://wa.me/6285732398679/?text=Halo, admin. Saya ingin berkonsultasi terkait layanan Innovatech Solusindo." className="bg-black dark:bg-black rounded-full w-fit text-white dark:text-white px-4 py-2 text-sm shadow-xl" target="_blank" rel="noopener noreferrer" >
+                <button><a href="https://wa.me/6285732398679/?text=Halo, admin. Saya ingin berkonsultasi terkait layanan Innovatech Solusindo." className="bg-black rounded-full w-fit text-white px-4 py-2 text-sm shadow-xl" target="_blank" rel="noopener noreferrer" >
                   Hubungi Admin
                 </a></button>
               </div>
@@ -100,16 +100,16 @@ export const Content = () => {
   return (
 
     <>
-      <div className="h-[8.5rem] bg-slate-100 flex justify-center items-center font-mono" id="layanan">
-        <h1 className="text-2xl text-slate-900">&#9472;&#9472;&nbsp;&nbsp;Layanan Kami&nbsp;&nbsp;&#9472;&#9472;</h1>
+      <div className="h-[5rem] md:h-[8rem] bg-slate-100 flex justify-center items-center font-mono" id="layanan">
+        <h1 className="text-lg md:text-2xl text-slate-900">&#9472;&#9472;&nbsp;&nbsp;Layanan Kami&nbsp;&nbsp;&#9472;&#9472;</h1>
       </div>
-      <div className="grid grid-cols-1 pt-10 pb-10 w-full bg-white dark:bg-gradient-to-b from-slate-900 to-slate-700 relative">
+      <div className="grid grid-cols-1 pt-10 pb-10 w-full bg-gradient-to-b from-slate-900 to-slate-700 relative">
         <AnimatedPinDemo />
       </div>
-      <div className="h-[8.5rem] bg-slate-100 flex justify-center items-center font-mono" id="tentang-kami">
-        <h1 className="text-2xl text-slate-900">&#9472;&#9472;&nbsp;&nbsp;Siapa Kami?&nbsp;&nbsp;&#9472;&#9472;</h1>
+      <div className="h-[5rem] md:h-[8rem] bg-slate-100 flex justify-center items-center font-mono" id="tentang-kami">
+        <h1 className="text-lg md:text-2xl text-slate-900">&#9472;&#9472;&nbsp;&nbsp;Siapa Kami?&nbsp;&nbsp;&#9472;&#9472;</h1>
       </div>
-      <div className="flex flex-col justify-center items-center pt-10 pb-10 w-full bg-slate-200 dark:bg-gradient-to-b from-slate-900 to-slate-700 relative p-10 gap-10 font-mono">
+      <div className="flex flex-col justify-center items-center pt-10 pb-10 w-full bg-gradient-to-b from-slate-900 to-slate-700 relative p-10 gap-10 font-mono">
       <SparklesCore
             id="test"
             background="transparent"
@@ -151,17 +151,17 @@ export const Content = () => {
           </div>
         </div>
       </div>
-      <div className="h-[5rem] bg-slate-100 flex justify-between items-center font-mono px-10" id="layanan">
-        <div className="text-sm flex flex-col items-center">
+      <div className="h-[5rem] bg-slate-100 flex justify-between items-center font-mono px-5" id="layanan">
+        <div className="text-xs md:text-sm font-bold flex flex-col items-center">
           <h1>Innovatech</h1>
           <h3>Solusindo</h3>
         </div>
-        <div className="text-[9px] md:text-[12px] flex gap-2">
+        <div className="text-[9px] md:text-[12px] flex gap-1">
           <p>Fitrah</p>-
           <p>Titus</p>-
           <p>Fajar</p>
         </div>
-        <div className="text-[9px] md:text-[12px] flex gap-2">
+        <div className="text-[10px] md:text-[12px] flex gap-2">
           <p>Surabaya, Indonesia</p>
         </div>
         
@@ -173,14 +173,14 @@ export const Content = () => {
 export const AnimatedPinDemo = () => {
   return (
 
-    <div className="w-full flex flex-col mt-60 md:mt-0 mb-60 md:mb-0 h-[30rem] gap-4 md:flex-row items-center justify-center  font-mono">
+    <div className="w-full flex flex-col mt-60 md:mt-0 mb-72 md:mb-0 h-[30rem] gap-4 md:flex-row items-center justify-center  font-mono">
       <PinContainer
-        title="Digitalisasi UMKM"
+        title="Grow-Up UMKM"
         href="/"
       >
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[17rem] h-[17rem] ">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-            Digitalisasi UMKM
+            <span className="italic">Grow-Up</span> UMKM
           </h3>
           <div className="text-sm !m-0 !p-0 font-normal">
             <span className="text-slate-500 ">
@@ -188,22 +188,21 @@ export const AnimatedPinDemo = () => {
             </span>
           </div>
           <div className="flex flex-1 w-full rounded-lg mt-4">
-            <img src="UMKM.jpg" alt="" />
+            <img src="/UMKM.jpg" alt=""/>
           </div>
         </div>
       </PinContainer>
-
       <PinContainer
         title="Korporasi"
         href="/"
       >
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[17rem] h-[17rem]">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-            Korporasi
+            Maturing Enterprises
           </h3>
           <div className="text-sm !m-0 !p-0 font-normal">
             <span className="text-slate-500 ">
-              Sistem Manajemen Proyek, Website, Manajemen Tenaga Kerja.
+              Manajemen Proyek, Manajemen SDM, Business Analytics.
             </span>
           </div>
           <div className="flex flex-1 w-full rounded-lg mt-4">
@@ -211,18 +210,17 @@ export const AnimatedPinDemo = () => {
           </div>
         </div>
       </PinContainer>
-
       <PinContainer
         title="Pendidikan"
         href="/"
       >
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[17rem] h-[17rem]">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-            Sistem Informasi Sekolah
+            E-Learning Solution
           </h3>
           <div className="text-base !m-0 !p-0 font-normal">
             <div className="text-slate-500 text-sm ">
-              Belajar-Mengajar dengan Terstruktur dan <span className="italic">Goals-oriented-learning.</span>
+              Belajar-Mengajar Terstruktur dan <span className="italic">Goals-oriented-learning.</span>
             </div>
           </div>
           <div className="flex flex-1 w-full rounded-lg mt-4">
