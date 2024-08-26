@@ -6,7 +6,15 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Innovatech Solusindo",
-  description: "Software House Surabaya",
+  manifest: "https://i.imgur.com/9d53YLH.png",
+  description: "Surabaya Software House",
+  applicationName: "Innovatech Solusindo",
+  authors: [
+    {url: "linkedin/in/fitrah-ramadhan", name: "Fitrah"},
+    {url: "", name: "Titus"},
+    {url: "", name: "Fajar"}
+  ],
+  keywords: ["jasa pembuatan website", "jasa pembuatana aplikasi", "surabaya" ]
 };
 
 export default function RootLayout({

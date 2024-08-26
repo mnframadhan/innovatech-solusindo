@@ -95,7 +95,7 @@ export const Content = () => {
       </div>
 
       <div className="grid grid-cols-1 pt-10 pb-10 w-full bg-gradient-to-b from-slate-900 to-slate-800 relative" id="pinned">
-        <AnimatedPinDemo />
+        <LayananKami />
       </div>
 
       <div className="h-[5rem] md:h-[8rem] bg-slate-100 flex justify-center items-center font-mono" id="tentang-kami">
@@ -156,7 +156,7 @@ export const Content = () => {
   );
 };
 
-export const AnimatedPinDemo = () => {
+export const LayananKami = () => {
   return (
 
     <div className="w-full flex flex-col mt-60 md:mt-0 mb-72 md:mb-0 h-[30rem] gap-4 md:flex-row items-center justify-center font-mono">
