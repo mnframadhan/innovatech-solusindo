@@ -1,20 +1,17 @@
 "use client"
 import { motion } from "framer-motion";
-import React  from "react";
-import { AuroraBackground } from "@/components/ui/aurora-background";
+import React from "react";
 import { FloatingNav } from "@/components/ui/floating-navbar";
-import { SparklesCore } from "@/components/ui/sparkles";
 import { PinContainer } from "@/components/ui/3d-pin";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 import Image from "next/image";
 
-export default function Home (): React.JSX.Element {
-  
-  const stacks = ['html', 'css', 'js', 'ts', 'react', 'vite', 'nodejs', 'express', 'postgre', 'mongo', 'redis']
+export default function Home(): React.JSX.Element {
+
+  const stacks = ['html', 'css', 'js', 'ts', 'react', 'vite', 'nodejs', 'express', 'postgre', 'mongo', 'redis', 'elasticsearch']
 
   return (
-    <>
-      <AuroraBackground>
+    <div id="jumbotron"  className="flex flex-col justify-center items-center w-full">
+      <div className="h-screen flex justify-center items-center">
         <motion.div
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -27,15 +24,6 @@ export default function Home (): React.JSX.Element {
         >
           <div className="flex flex-col justify-center items-center mb-40 md:mb-0 font-mono">
             <div className="flex flex-col justify-center items-center">
-              <SparklesCore
-                id="tsparticlesfullpage"
-                background="transparent"
-                minSize={0.2}
-                maxSize={3}
-                particleDensity={150}
-                className="w-full h-full absolute z-0"
-                particleColor="#008000"
-              />
               <div className="z-50 text-center">
                 <div className="text-3xl md:text-7xl font-bold text-slate-200 ">
                   Innovatech Solusindo.
@@ -43,34 +31,36 @@ export default function Home (): React.JSX.Element {
                 <div className="font-extralight text-xs md:text-4xl py-4 text-center text-slate-200">
                   <h3 className="text-xl">Kembangkan Bisnismu dengan Sistem Ter-Digitalisasi</h3>
                 </div>
-                <button><a href="https://wa.me/6285732398679/?text=Halo, admin. Saya ingin berkonsultasi terkait layanan Innovatech Solusindo." className="bg-black rounded-full w-fit text-white px-4 py-2 text-sm shadow-xl" target="_blank" rel="noopener noreferrer" >
+                <button><a href="https://wa.me/6285732398679/?text=Halo, admin. Saya ingin berkonsultasi terkait layanan Innovatech Solusindo." className="bg-black rounded-full w-fit text-white px-4 py-2 text-lg uppercase shadow-xl font-bold hover:bg-[#0762c8] duration-300 " target="_blank" rel="noopener noreferrer" >
                   Hubungi Admin
                 </a></button>
               </div>
-              
+
             </div>
           </div>
         </motion.div>
-        <div className="text-slate-200 absolute bottom-10 flex flex-col">
-          <div className="flex gap-7 flex-wrap px-10 justify-center">
+      </div>
 
-            {stacks.map((stack) => {
-              return (
-                <div key={stack} className="max-w-16 flex flex-wrap sm:max-w-24 ">
-                  <Image src={`/${stack}.png`} alt={`${stack}`} width={100} height={72} />
-                </div>
-              )
-            })
-            }
-          </div>
+      <div className="text-slate-200 absolute bottom-10 flex flex-col items-center justify-center">
+        <div className="flex flex-wrap items-center justify-center">
+          {stacks.map((stack) => {
+            return (
+              <div key={stack} className="max-w-16 flex items-center justify-center flex-wrap sm:max-w-24 ">
+                <Image src={`/${stack}.png`} alt={`${stack}`} width={100} height={72} />
+              </div>
+              
+            )
+          })
+          }
         </div>
-      </AuroraBackground>
+      </div>
+
       <NavbarComp />
-    </>
+    </div>
   );
 }
 
-export function NavbarComp () {
+export function NavbarComp() {
   const navItems = [
     {
       name: "Layanan",
@@ -85,7 +75,7 @@ export function NavbarComp () {
       link: "https://wa.me/6285732398679/?text=Halo, admin. Saya ingin berkonsultasi terkait layanan Innovatech Solusindo.",
       target: "_blank",
       passHref: true,
-      
+
     },
   ];
   return (
@@ -103,27 +93,23 @@ export const Content = () => {
       <div className="h-[5rem] md:h-[8rem] bg-slate-100 flex justify-center items-center font-mono" id="layanan">
         <h1 className="text-lg md:text-2xl text-slate-900">&#9472;&#9472;&nbsp;&nbsp;Layanan Kami&nbsp;&nbsp;&#9472;&#9472;</h1>
       </div>
-      <div className="grid grid-cols-1 pt-10 pb-10 w-full bg-gradient-to-b from-slate-900 to-slate-700 relative">
+
+      <div className="grid grid-cols-1 pt-10 pb-10 w-full bg-gradient-to-b from-slate-900 to-slate-800 relative" id="pinned">
         <AnimatedPinDemo />
       </div>
+
       <div className="h-[5rem] md:h-[8rem] bg-slate-100 flex justify-center items-center font-mono" id="tentang-kami">
         <h1 className="text-lg md:text-2xl text-slate-900">&#9472;&#9472;&nbsp;&nbsp;Siapa Kami?&nbsp;&nbsp;&#9472;&#9472;</h1>
       </div>
-      <div className="flex flex-col justify-center items-center pt-10 pb-10 w-full bg-gradient-to-b from-slate-900 to-slate-700 relative p-10 gap-10 font-mono">
-      <SparklesCore
-            id="test"
-            background="transparent"
-            minSize={0.2}
-            maxSize={2}
-            particleDensity={200}
-            className="w-full h-full absolute z-0"
-            particleColor="#008000"
-              />
+      
+      <div className="flex flex-col justify-center items-center pt-10 pb-10 w-full bg-gradient-to-b from-slate-900 to-slate-700 relative p-10 gap-10 font-mono"  id="kenapa-memilih-kami">
+
         <div className="max-w-[15rem] md:w-1/4 z-50">
           <div className="flex flex-col justify-center items-center w-full">
             <img src="logo.png" alt="logo" className="bg-white rounded-full p-4" />
           </div>
         </div>
+
         <div className="w-full md:w-1/2 z-50">
           <div>
             <div className="text-center mb-10">
@@ -164,7 +150,7 @@ export const Content = () => {
         <div className="text-[10px] md:text-[12px] flex gap-2">
           <p>Surabaya, Indonesia</p>
         </div>
-        
+
       </div>
     </>
   );
@@ -173,7 +159,7 @@ export const Content = () => {
 export const AnimatedPinDemo = () => {
   return (
 
-    <div className="w-full flex flex-col mt-60 md:mt-0 mb-72 md:mb-0 h-[30rem] gap-4 md:flex-row items-center justify-center  font-mono">
+    <div className="w-full flex flex-col mt-60 md:mt-0 mb-72 md:mb-0 h-[30rem] gap-4 md:flex-row items-center justify-center font-mono">
       <PinContainer
         title="Grow-Up UMKM"
         href="/"
@@ -188,7 +174,7 @@ export const AnimatedPinDemo = () => {
             </span>
           </div>
           <div className="flex flex-1 w-full rounded-lg mt-4">
-            <img src="/UMKM.jpg" alt=""/>
+            <img src="/UMKM.jpg" alt="" />
           </div>
         </div>
       </PinContainer>
@@ -228,7 +214,6 @@ export const AnimatedPinDemo = () => {
           </div>
         </div>
       </PinContainer>
-      <BackgroundBeams />
     </div>
   );
 }
