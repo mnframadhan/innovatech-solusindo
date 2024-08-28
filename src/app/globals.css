@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-#jumbotron, #pinned, #kenapa-memilih-kami{
-  background-color: #e5e5f7;
-  opacity: 1;
-  background-image:  linear-gradient(#334155 1px, transparent 1px), linear-gradient(to right, #334155 1px, #0F172A 1px);
-  background-size: 20px 20px;
-
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;

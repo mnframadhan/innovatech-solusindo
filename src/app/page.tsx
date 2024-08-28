@@ -10,53 +10,63 @@ export default function Home(): React.JSX.Element {
   const stacks = ['html', 'css', 'js', 'ts', 'react', 'vite', 'nodejs', 'express', 'postgre', 'mongo', 'redis', 'elasticsearch']
 
   return (
-    <div id="jumbotron"  className="flex flex-col justify-center items-center w-full">
-      <div className="h-screen flex justify-center items-center">
-        <motion.div
-          initial={{ opacity: 0.0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          className="relative flex flex-col gap-3 items-center px-4"
-        >
-          <div className="flex flex-col justify-center items-center mb-40 md:mb-0 font-mono">
-            <div className="flex flex-col justify-center items-center">
-              <div className="z-50 text-center">
-                <div className="text-3xl md:text-7xl font-bold text-slate-200 ">
-                  Innovatech Solusindo.
-                </div>
-                <div className="font-extralight text-xs md:text-4xl py-4 text-center text-slate-200">
-                  <h3 className="text-xl">Kembangkan Bisnismu dengan Sistem Ter-Digitalisasi</h3>
-                </div>
-                <button><a href="https://wa.me/6285732398679/?text=Halo, admin. Saya ingin berkonsultasi terkait layanan Innovatech Solusindo." className="bg-black rounded-full w-fit text-white px-4 py-2 text-lg uppercase shadow-xl font-bold hover:bg-[#0762c8] duration-300 " target="_blank" rel="noopener noreferrer" >
-                  Hubungi Admin
-                </a></button>
-              </div>
+    <>
+      <div className="absolute opacity-20 mt-5 md:mt-10 z-50">
+        <img width={900} src="/logo-background.png" alt="logo_perusahaan" className="" />
+      </div>
+      <div id="jumbotron" className="flex flex-col justify-center items-center w-full bg-gradient-to-r from-[#0762c8] to-[#edf1ff] pt-16 md:pt-4">
+        <div className="flex justify-center items-center relative h-screen">
+          <motion.div
+            initial={{ opacity: 0.0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.3,
+              duration: 0.8,
+              ease: "easeInOut",
+            }}
+            className="relative flex flex-col gap-3 px-4"
+          >
+            <div className="flex flex-col justify-center items-center font-[Handjet]">
 
+              <div className="flex flex-col justify-center items-center">
+
+                <div className="z-50 pb-20 text-center flex flex-col justify-center gap-4">
+
+                  <div className="tracking-widest text-5xl md:text-8xl font-extrabold bg-[#141285] bg-clip-text text-transparent">
+                    Innovatech Solusindo
+                  </div>
+
+                  <div className="text-xs md:text-4xl font-bold text-slate-700 max-w-[700px] text-center self-center ">
+                    <h3 className="text-center text-xl md:text-3xl">Kami membantu digitalisasi proses bisnis secara kolaboratif bagi usaha mikro, kecil, menengah, hingga koorporasi.</h3>
+                  </div>
+
+                  <button><a href="https://wa.me/6285732398679/?text=Halo, admin. Saya ingin berkonsultasi terkait layanan Innovatech Solusindo." className="bg-slate-400 rounded-full w-fit text-white px-4 py-2 text-lg uppercase shadow-xl font-bold hover:bg-[#0762c8] duration-300 tracking-widest " target="_blank" rel="noopener noreferrer" >
+                    Hubungi Admin
+                  </a></button>
+
+                </div>
+              </div>
             </div>
-          </div>
-        </motion.div>
-      </div>
-
-      <div className="text-slate-200 absolute bottom-10 flex flex-col items-center justify-center">
-        <div className="flex flex-wrap items-center justify-center">
-          {stacks.map((stack) => {
-            return (
-              <div key={stack} className="max-w-16 flex items-center justify-center flex-wrap sm:max-w-24 ">
-                <Image src={`/${stack}.png`} alt={`${stack}`} width={100} height={72} />
-              </div>
-              
-            )
-          })
-          }
+          </motion.div>
         </div>
-      </div>
 
-      <NavbarComp />
-    </div>
+        <div className="text-slate-200 absolute bottom-1 md:bottom-5  flex flex-col items-center justify-center">
+          <div className="flex flex-wrap items-center justify-center z-50 gap-4">
+            {stacks.map((stack) => {
+              return (
+                <div key={stack} className="max-w-16 flex items-center justify-center flex-wrap sm:max-w-24 ">
+                  <Image src={`/${stack}.png`} alt={`${stack}`} width={100} height={72} />
+                </div>
+
+              )
+            })
+            }
+          </div>
+        </div>
+
+        <NavbarComp />
+      </div>
+    </>
   );
 }
 
@@ -90,54 +100,73 @@ export const Content = () => {
   return (
 
     <>
-      <div className="h-[5rem] md:h-[8rem] bg-slate-100 flex justify-center items-center font-mono" id="layanan">
+      <div className="h-[5rem] md:h-[8rem] uppercase tracking-widest font-bold md:text-3xl bg-slate-100 flex justify-center items-center font-[Handjet]" id="layanan">
         <h1 className="text-lg md:text-2xl text-slate-900">&#9472;&#9472;&nbsp;&nbsp;Layanan Kami&nbsp;&nbsp;&#9472;&#9472;</h1>
       </div>
 
-      <div className="grid grid-cols-1 pt-10 pb-10 w-full bg-gradient-to-b from-slate-900 to-slate-800 relative" id="pinned">
+      <div className="grid grid-cols-1 pt-10 pb-10 w-full bg-gradient-to-r from-[#0762c8] to-[#edf1ff] relative" id="pinned">
         <LayananKami />
       </div>
 
-      <div className="h-[5rem] md:h-[8rem] bg-slate-100 flex justify-center items-center font-mono" id="tentang-kami">
+      <div className="h-[5rem] md:h-[8rem] uppercase tracking-widest font-bold md:text-3xl bg-slate-100 flex justify-center items-center font-[Handjet]" id="tentang-kami">
         <h1 className="text-lg md:text-2xl text-slate-900">&#9472;&#9472;&nbsp;&nbsp;Siapa Kami?&nbsp;&nbsp;&#9472;&#9472;</h1>
       </div>
-      
-      <div className="flex flex-col justify-center items-center pt-10 pb-10 w-full bg-gradient-to-b from-slate-900 to-slate-700 relative p-10 gap-10 font-mono"  id="kenapa-memilih-kami">
+
+      <div className="flex flex-col justify-center items-center pt-10 pb-10 w-full bg-gradient-to-r from-[#0762c8] to-[#edf1ff] relative p-10 gap-10 font-[Plus Jakarta Sans]" id="kenapa-memilih-kami">
 
         <div className="max-w-[15rem] md:w-1/4 z-50">
-          <div className="flex flex-col justify-center items-center w-full">
-            <img src="logo.png" alt="logo" className="bg-white rounded-full p-4" />
-          </div>
+          <motion.div 
+            initial={{ opacity: 0.0, y: 40 }}
+            whileInView={{ opacity: 1, y: 40 }}
+            transition={{
+              delay: 0.3,
+              duration: 0.8,
+              ease: "easeInOut",
+            }}
+            className="relative flex flex-col gap-3 px-4 mb-10">
+            <img src="logo.png" alt="logo" className="bg-white rounded-full p-4 ease-in-out" />
+          </motion.div>
         </div>
 
         <div className="w-full md:w-1/2 z-50">
           <div>
-            <div className="text-center mb-10">
+            <div className="text-center">
               <h2 className="text-2xl font-bold text-white mb-2">Mengapa Memilih Kami?</h2>
               <p className="text-md text-slate-300">Kami memberikan solusi terbaik untuk mendukung perkembangan bisnis Anda.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-slate-700 p-6 rounded-lg shadow-lg hover:bg-slate-400 transition duration-300 text-white">
-                <h3 className="text-2xl font-semibold mb-3">Tim Ahli</h3>
-                <p className="text-slate-300">Kami didukung oleh tim pengembang yang berpengalaman dan berdedikasi untuk memberikan yang terbaik bagi klien.</p>
-              </div>
-              <div className="bg-slate-700 p-6 rounded-lg shadow-lg hover:bg-slate-400 transition duration-300 text-white">
-                <h3 className="text-2xl font-semibold mb-3">Pendekatan Kolaboratif</h3>
-                <p className="text-slate-300">Kami bekerja sama dengan klien pada setiap tahap pengembangan untuk memastikan hasil yang sesuai dengan harapan.</p>
-              </div>
-              <div className="bg-slate-700 p-6 rounded-lg shadow-lg hover:bg-slate-400 transition duration-300 text-white">
-                <h3 className="text-2xl font-semibold mb-3">Inovasi Teknologi</h3>
-                <p className="text-slate-300">Kami selalu menggunakan teknologi terbaru dan terbaik untuk memastikan aplikasi yang kami buat relevan dan unggul di pasaran.</p>
-              </div>
-              <div className="bg-slate-700 p-6 rounded-lg shadow-lg hover:bg-slate-400 transition duration-300 text-white">
-                <h3 className="text-2xl font-semibold mb-3">Harga Kompetitif</h3>
-                <p className="text-slate-300">Kami menawarkan solusi berkualitas tinggi dengan harga yang kompetitif, memastikan nilai terbaik bagi investasi Anda.</p>
-              </div>
+            <div className="">
+              <CardHoverEffectDemo />
             </div>
           </div>
         </div>
       </div>
-      <div className="h-[5rem] bg-slate-100 flex justify-between items-center font-mono px-5" id="layanan">
+      <div className="h-[5rem] md:h-[8rem] uppercase tracking-widest font-bold md:text-3xl bg-slate-100 flex justify-center items-center font-[Handjet]">
+        <h1 className="text-lg md:text-2xl text-slate-900 ">&#9472;&#9472;&nbsp;&nbsp;Co-Founders&nbsp;&nbsp;&#9472;&#9472;</h1>
+      </div>
+
+      <div className="flex h-[30rem] justify-center items-center w-full bg-gradient-to-r from-[#0762c8] to-[#edf1ff] relative gap-2 md:gap-20 font-[Plus Jakarta Sans]">
+        <div>
+          <div className="bg-indigo-500 w-32 lg:w-56 h-32 lg:h-60 rounded-t-xl overflow-hidden"></div>
+          <div className="bg-white h-12 rounded-b-xl flex flex-col text-sm text-center justify-center">
+            <h1>Fitrah</h1>
+          </div>
+        </div>
+        <div>
+          <div className="bg-indigo-500 w-32 lg:w-56 h-32 lg:h-60 rounded-t-xl overflow-hidden"></div>
+          <div className="bg-white h-12 rounded-b-xl flex flex-col text-sm text-center justify-center">
+            <h1>Titus</h1>
+          </div>
+        </div>
+        <div>
+          <div className="bg-indigo-500 w-32 lg:w-56 h-32 lg:h-60 rounded-t-xl overflow-hidden"></div>
+          <div className="bg-white h-12 rounded-b-xl flex flex-col text-sm text-center justify-center">
+            <h1>Fajar</h1>
+          </div>
+        </div>
+
+      </div>
+
+      <div className="h-[5rem] bg-slate-100 flex justify-between items-center font-[Plus Jakarta Sans] px-5">
         <div className="text-xs md:text-sm font-bold flex flex-col items-center">
           <h1>Innovatech</h1>
           <h3>Solusindo</h3>
@@ -159,7 +188,7 @@ export const Content = () => {
 export const LayananKami = () => {
   return (
 
-    <div className="w-full flex flex-col mt-60 md:mt-0 mb-72 md:mb-0 h-[30rem] gap-4 md:flex-row items-center justify-center font-mono">
+    <div className="w-full flex flex-col mt-60 md:mt-0 mb-72 md:mb-0 h-[30rem] gap-4 md:flex-row items-center justify-center font-[Plus Jakarta Sans]">
       <PinContainer
         title="Grow-Up UMKM"
         href="/"
@@ -217,3 +246,38 @@ export const LayananKami = () => {
     </div>
   );
 }
+import { HoverEffect } from "../components/ui/card-hover-effect";
+
+export function CardHoverEffectDemo() {
+  return (
+    <div className="mx-auto w-full">
+      <HoverEffect items={projects} />
+    </div>
+  );
+}
+export const projects = [
+  {
+    title: "Tim Ahli",
+    description:
+      "Kami didukung oleh tim pengembang yang berpengalaman dan berdedikasi untuk memberikan yang terbaik bagi klien.",
+    link: "/"
+  },
+  {
+    title: "Pendekatan Kolaboratif",
+    description:
+      "Kami bekerja sama dengan klien pada setiap tahap pengembangan untuk memastikan hasil yang sesuai dengan harapan.",
+    link: "/"
+  },
+  {
+    title: "Inovasi Teknologi",
+    description:
+      "Kami selalu menggunakan teknologi terbaru dan terbaik untuk memastikan aplikasi yang kami buat relevan dan unggul di pasaran.",
+    link: "/"
+  },
+  {
+    title: "Harga Kompetitif",
+    description:
+      "Kami menawarkan solusi berkualitas tinggi dengan harga yang kompetitif, memastikan nilai terbaik bagi investasi Anda.",
+    link: "/"
+  }
+];
