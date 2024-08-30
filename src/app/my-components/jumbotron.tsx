@@ -41,20 +41,20 @@ export const Jumbotron = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div className="text-slate-200 absolute bottom-1 md:bottom-5  flex flex-col items-center justify-center">
-                    <div className="flex flex-wrap items-center justify-center z-30 gap-4">
-                        {stacks.map((stack) => {
-                            return (
-                                <div key={stack} className="max-w-16 flex items-center justify-center flex-wrap sm:max-w-24 ">
-                                    <Image src={`/${stack}.png`} alt={`${stack}`} width={100} height={72} className="saturate-0 hover:saturate-100 duration-300" />
-                                </div>
-                            )
-                        })
-                        }
+                    <div className="text-slate-200 absolute md:bottom-5 bottom-2  flex flex-col items-center justify-center">
+                        <div className="flex flex-wrap items-center justify-center z-30 gap-4">
+                            {stacks.map((stack) => {
+                                return (
+                                    <div key={stack} className="max-w-16 flex items-center justify-center flex-wrap sm:max-w-24 ">
+                                        <Image src={`/${stack}.png`} alt={`${stack}`} width={72} height={72} className="saturate-0 hover:saturate-100 duration-300" />
+                                    </div>
+                                )
+                            })
+                            }
+                        </div>
                     </div>
                 </div>
+
                 <NavbarComp />
             </div>
 
