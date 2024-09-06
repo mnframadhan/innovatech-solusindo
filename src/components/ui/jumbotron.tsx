@@ -1,20 +1,23 @@
 export const Jumbotron = () => {
     return (
 
-        <div className="bg-gradient-to-b from-primary-blue to-secondary-blue h-screen flex flex-col items-center pt-16 px-32 text-center gap-4">
-            <div className="flex flex-col gap-2">
-                <h1 className="text-secondary-white text-5xl font-extrabold px-20 leading-snug">Software Development & Enterprise Apps Integration.</h1>
-                
+        <div className="relative bg-gradient-to-b from-primary-blue to-secondary-blue h-[700px] flex flex-col items-center pt-44 px-24 text-center gap-4">
+            <div className="absolute left-2 z-0 bottom-0 opacity-30">
+                <img src="logo-background.png" width={600} alt="logo" />
             </div>
-            <div className="text-slate-300 px-48"> 
-                <p>We assist in the digitalization of business processes collaboratively for micro, small, and medium enterprises, corporations, and educational institutions.</p>
+
+            <div className="flex flex-col gap-20 z-20">
+                <div className="flex flex-col leading-normal ">
+                    <h1 className="text-secondary-white text-9xl font-extrabold px-20 uppercase tracking-widest">Innovatech</h1>
+                    <h2 className="text-secondary-white uppercase text-5xl">Solusindo</h2>
+                </div>
+                <div className="text-slate-300 text-3xl px-24"> 
+                    <p>Kami membantu proses digitalisasi untuk usaha mikro, kecil, menengah, korporasi, hingga lembaga pendidikan.</p>
+                </div>
             </div>
-        <div className="w-full h-full  mt-4 bg-[#030303] flex items-end justify-center">
-            <img src="/cover.jpg" alt="robot" className="max-h-[320px]" />
-        </div>
+            <div className="h-2 bg-queternary-blue z-50" />
+            <div className="h-2 bg-tertiary-blue z-50" />
         </div>
 
     )
 }
-
-// [#030303]

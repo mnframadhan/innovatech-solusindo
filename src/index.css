@@ -6,12 +6,19 @@
 
 
 body {
-    width: 1280px;
+    min-width: 1280px;
     margin: 0 auto;
     font-family: 'Plus Jakarta Sans';
 }
 
 @media (width: 1280px) {
+    body {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (width: 1920px) {
     body {
         width: 100%;
         margin: 0;
