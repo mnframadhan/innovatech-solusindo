@@ -16,7 +16,7 @@ export const Footer = () => {
                     <p className="text-sm font-light">Jl. Griya Kebraon Barat XVI Ci NO 3, RT.01/RW.03, Kebraon, Kec. Karangpilang, Surabaya, Jawa Timur 60222</p>
                 </div>
                 <div className="w-44 flex flex-col gap-4 items-center">
-                    <h3 className="font-semibold">Hubungi Kami</h3>
+                    <h3 className="font-semibold text-secondary-white">Hubungi Kami</h3>
                     <div className="flex flex-col gap-2">
                         <a href="https://wa.me/6285732398679/?text=Halo, admin. Saya ingin berkonsultasi terkait layanan Innovatech Solusindo." 
                             className="font-light text-nowrap text-sm flex items-center bg-secondary-white text-black py-1 text-center justify-center w-32 rounded-md" target="_blank">WhatsApp &nbsp;&nbsp; <ExternalLink size={14}/></a>
@@ -25,7 +25,7 @@ export const Footer = () => {
                     </div>
                     
                 </div>
-                <div className="w-72 flex items-end justify-center flex-col">
+                <div className="w-72 flex items-end justify-center flex-col text-secondary-white">
                     <img src="/mirrored-logo.png" alt="logo" className="w-44 opacity-70" />
                     <p>Innovatech Solusindo</p>
                 </div>
