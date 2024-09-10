@@ -2,19 +2,19 @@ export const FeaturedServices = [
 
     {
         title : 'Full-Featured Point of Sales (PoS)',
-        sub_title : "A web-based application for managing sales and transactions from any internet-enabled device. It streamlines sales processing, inventory tracking, and payment handling, offering businesses flexibility and ease of use."
+        sub_title: "Aplikasi berbasis website yang menunjang manajemen penjualan di berbagai perangkat. Buat alur penjualan, tracking data stok, penanganan pembayaran, dan tawarkan fleksibilitas dan kemudahan penggunaan.",
     },
     {
         title: 'Warehouse Management System (WMS)',
-        sub_title : "streamlines warehouse operations, including inventory tracking and order fulfillment. It enhances efficiency and accuracy, helping businesses manage their storage and distribution effectively."
+        sub_title: "Atur operasional dengan sistem pergudangan, tracking data stok, dan order prediksi untuk pemenuhannya. Menghasilkan akurasi dan efisiensi, kami membantu UMKM untuk mengatur gudang dan pendistribusian secara efektif ",
     },
     {
         title: 'Assets Management System',
-        sub_title: "Helps businesses track and manage their physical assets. It streamlines the lifecycle of assets, from acquisition to disposal, ensuring efficient use and maintenance while reducing costs and risks."
+        sub_title: "Lakukan tracking dan mengatur aset-aset fisik. Ungkap bagaimana daya waktu suatu aset, mulai dari pengadaan hingga pemusnahan, memastikan efisiensi penggunaan dan pemelihaaraan demi pengurangan biaya dan resiko."
     },
     {
         title: 'Learning Management System (LMS)',
-        sub_title : "facilitates the creation, delivery, and management of educational content. It enables businesses and institutions to provide training, track progress, and manage learning resources effectively, all in one platform."
+        sub_title: "Atur opersaional pendidikan: mulai dari pembuatan, distribusi, dan sistem belajar-mengajar. Perusahaan dapat menyediakan training, track progress, dan pengaturan sumberdaya secara efektif, semuanya dalam satu platform."
     }
 
 ]

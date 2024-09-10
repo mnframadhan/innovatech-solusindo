@@ -11,9 +11,9 @@ export const Navbar = () => {
                 <Link to="/">Innovatech Solusindo</Link>
             </div>
             <div className="flex justify-end px-20 items-center gap-10">
-                <a href="#our-services" className="hover:underline">Our Services</a>
-                <a href="#our-teams" className="hover:underline">About Us</a>
-                <a className="hover:underline flex items-center" href="https://wa.me/6285732398679/?text=Halo, admin. Saya ingin berkonsultasi terkait layanan Innovatech Solusindo." >Contact us &nbsp;&nbsp; <ExternalLink size={14}/></a>     
+                <a href="#our-services" className="hover:underline">Layanan Kami</a>
+                <a href="#our-teams" className="hover:underline">Tentang Kami</a>
+                <a className="hover:underline flex items-center" href="https://wa.me/6285732398679/?text=Halo, admin. Saya ingin berkonsultasi terkait layanan Innovatech Solusindo." >Kontak Kami &nbsp;&nbsp; <ExternalLink size={18}/></a>     
             </div>
         </div>
 

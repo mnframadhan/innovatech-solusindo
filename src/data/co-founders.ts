@@ -9,7 +9,7 @@ export const coFounders = [
         title: "Software Engineer"
     },
     {
-        name: "Fajar Nugraha",
-        title: "Strategic Partnership Manager"
+        name: "Fajar N",
+        title: "Strategic Alliance Manager"
     }
 ]

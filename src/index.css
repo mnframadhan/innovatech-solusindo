@@ -8,7 +8,7 @@
 body {
     min-width: 1280px;
     margin: 0 auto;
-    font-family: 'Plus Jakarta Sans';
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 @media (width: 1280px) {

@@ -1,3 +1,5 @@
+import { ExternalLink } from "lucide-react"
+
 export const Jumbotron = () => {
     return (
 
@@ -11,7 +13,10 @@ export const Jumbotron = () => {
                     <h1 className="text-secondary-white text-9xl font-extrabold px-20 uppercase tracking-widest">Innovatech</h1>
                     <h2 className="text-secondary-white uppercase text-5xl">Solusindo</h2>
                 </div>
-                <div className="text-slate-300 text-3xl px-24"> 
+                <div className="flex self-center bg-slate-600 px-3 py-2">
+                    <a className=" text-white" href="https://wa.me/6285732398679/?text=Halo, admin. Saya ingin berkonsultasi terkait layanan Innovatech Solusindo." target="_blank" >Kontak Kami &nbsp;&nbsp;</a> <ExternalLink className="self-center" size={18} color="white"/>
+                </div>
+                <div className="text-slate-300 text-2xl px-24"> 
                     <p>Kami membantu proses digitalisasi untuk usaha mikro, kecil, menengah, korporasi, hingga lembaga pendidikan.</p>
                 </div>
             </div>

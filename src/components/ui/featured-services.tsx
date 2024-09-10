@@ -7,12 +7,12 @@ export const FeaturedService = () => {
             <div className="h-2 bg-queternary-blue" />
             <div className="h-2 bg-tertiary-blue" />
 
-            <h2 className="text-secondary-white text-3xl tracking-wider font-extrabold px-40 py-10 flex flex-col">Featured Service</h2>
-            <div className="flex px-40 gap-20">
+            <h2 className="text-secondary-white text-3xl tracking-wider font-extrabold px-60 py-10 flex flex-col">Featured Service</h2>
+            <div className="flex px-60 gap-20">
                 <div className="bg-slate-700 w-1/2 shadow-xl max-w-[400px] h-[500px] overflow-hidden ">
                     <img src="/featured-image.jpg" alt="featured-image" className="w-[480px] h-[500px]" />
                 </div>
-                <div className=" w-1/2 px-5 flex flex-col gap-4 ">
+                <div className=" w-1/2 px-5 flex flex-col gap-4">
                     <h2 className="font-extrabold text-secondary-white text-2xl">Web Application</h2>
                     <div className="flex flex-col gap-4">
                         {FeaturedServices.map(fs => {
