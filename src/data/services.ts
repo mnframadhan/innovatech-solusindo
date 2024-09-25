@@ -1,35 +1,38 @@
 export const services = [
-
-    {
-        title : "Web Application",
-        sub_title: "Aplikasi berbasis web sesuai dengan keinginan client.",
-        image: "web-application.jpg"
-        
-    }, 
-    {
-        title : "Company Profile Website",
-        sub_title: "Bangun website profesional yang menunjukkan produk dan jasa.",
-        image: "website.jpg"
-    },
-    {
-        title: "Desktop/Mobile Apps",
-        sub_title : "Buat atau re-write aplikasi perusahaan, integrasi antar aplikasi.",
-        image: "mobile and desktop.jpg"
-    },
-    {
-        title: "Data Science & Analytics",
-        sub_title: "Analisa, visualisasi, dan ekstrak insight penting dari data",
-        image: "data-science.jpg"
-    },
-    {
-        title: "Web Scraping",
-        sub_title: "Kumpulkan data dari website dan ekstrak informasi bernilai bagi perusahaaan",
-        image: "web-scraping.png"
-    },
-    {
-        title: "Natural Language Processing",
-        sub_title: "Analisa data text dari jurnal atau buku, buat analisa seperti sentimen text.",
-        image: "nlp.webp"
-    }
-
-]
+  {
+    title: "Custom and Responsive Websites",
+    sub_title:
+      "Website development services tailored to client needs, featuring responsive design, SEO optimization, and advertising strategies to enhance online visibility.",
+    image: "web-application.jpg",
+  },
+  {
+    title: "Web-Based Business Management Systems",
+    sub_title:
+      "Web-based systems to manage business aspects such as inventory, scheduling, and financial reporting.",
+    image: "website.jpg",
+  },
+  {
+    title: "Mobile Applications",
+    sub_title:
+      "Development of intuitive and user-friendly mobile applications for iOS and Android, customized to meet client business needs.",
+    image: "mobile and desktop.jpg",
+  },
+  {
+    title: "Custom Software Development Services",
+    sub_title:
+      "Custom software development to meet specific client needs, whether for desktop or web applications.",
+    image: "data-science.jpg",
+  },
+  {
+    title: "E-Commerce Websites",
+    sub_title:
+      "Development of e-commerce websites with payment systems, product management, and analytics tools to boost sales.",
+    image: "web-scraping.png",
+  },
+  {
+    title: "Digital Strategy Consultation and Development",
+    sub_title:
+      "Consultation on digital transformation and software strategy, including planning for the implementation of new technologies.",
+    image: "nlp.webp",
+  },
+];
