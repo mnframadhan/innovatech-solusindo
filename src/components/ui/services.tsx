@@ -1,8 +1,14 @@
 import { services } from "../../data/services";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useNavigate } from "@tanstack/react-router";
 
 export const Services = () => {
+  const navigate = useNavigate();
+  const handleServiceClick = (serviceTitle: string) => {
+    navigate({ to: "/detailservice" });
+  };
+
   return (
     <div
       className="bg-secondary-white flex flex-col items-center py-14 gap-10"
@@ -22,13 +28,14 @@ export const Services = () => {
             <motion.div
               ref={refService} // Menghubungkan ref ke motion.div
               key={service.title}
-              className="flex flex-col gap-2 py-4 text-center w-72 px-2 items-center shadow-2xl"
+              className="flex flex-col gap-2 py-4 text-center w-72 px-2 items-center shadow-2xl cursor-pointer" // Tambahkan cursor pointer
               initial={{ opacity: 0, x: 100 }} // Memulai dari transparan dan di kanan
               animate={{
                 opacity: inViewService ? 1 : 0,
                 x: inViewService ? 0 : 100,
               }} // Fade in dari kanan
               transition={{ duration: 0.3, delay: index * 0.1 }} // Durasi dengan penundaan
+              onClick={() => handleServiceClick(service.title)} // Panggil handler saat diklik
             >
               <div className="overflow-hidden">
                 <img

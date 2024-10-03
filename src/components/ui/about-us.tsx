@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 export const AboutUs = () => {
   const { ref: refContent, inView: inViewContent } = useInView({
     triggerOnce: false, // Re-trigger when scrolling back
-    threshold: 0.01,
+    threshold: 0.3,
   });
 
   return (

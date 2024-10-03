@@ -5,7 +5,6 @@ import { AboutUs } from "../components/ui/about-us";
 import { MainAdvantages } from "../components/ui/main-advantages";
 import { Teams } from "../components/ui/our-teams";
 import { Headquarter } from "../components/ui/headquarters";
-import { Footer } from "../components/ui/footer";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -21,7 +20,6 @@ function Index() {
         <MainAdvantages />
         <Teams />
         <Headquarter />
-        <Footer />
       </div>
     </>
   );

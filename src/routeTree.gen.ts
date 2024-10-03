@@ -11,9 +11,15 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as DetailserviceImport } from './routes/detailservice'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
+
+const DetailserviceRoute = DetailserviceImport.update({
+  path: '/detailservice',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const IndexRoute = IndexImport.update({
   path: '/',
@@ -31,6 +37,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
+    '/detailservice': {
+      id: '/detailservice'
+      path: '/detailservice'
+      fullPath: '/detailservice'
+      preLoaderRoute: typeof DetailserviceImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -38,32 +51,37 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/detailservice': typeof DetailserviceRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/detailservice': typeof DetailserviceRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/detailservice': typeof DetailserviceRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/detailservice'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/detailservice'
+  id: '__root__' | '/' | '/detailservice'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DetailserviceRoute: typeof DetailserviceRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DetailserviceRoute: DetailserviceRoute,
 }
 
 export const routeTree = rootRoute
@@ -78,11 +96,15 @@ export const routeTree = rootRoute
     "__root__": {
       "filePath": "__root.tsx",
       "children": [
-        "/"
+        "/",
+        "/detailservice"
       ]
     },
     "/": {
       "filePath": "index.tsx"
+    },
+    "/detailservice": {
+      "filePath": "detailservice.tsx"
     }
   }
 }
