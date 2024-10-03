@@ -44,8 +44,8 @@ export const Teams = () => {
       <div className="px-40 py-10 flex gap-20 items-center justify-center ">
         {coFounders.map((cf, index) => {
           let animationProps = {
-            initial: { opacity: 0 },
-            animate: { opacity: inViewLeft ? 1 : 0 },
+            initial: { opacity: 0, x: 0, y:0  },
+            animate: { opacity: inViewLeft ? 1 : 0, x: 0, y: 0 },
             transition: { duration: 0.3 },
             ref: refLeft,
           };
@@ -53,30 +53,33 @@ export const Teams = () => {
           if (index === 0) {
             animationProps = {
               ...animationProps,
-              initial: { opacity: 0, x: -100 }, // Animasi dari kiri
+              initial: { opacity: 0, x: -100, y:0 }, // Animasi dari kiri
               animate: {
                 opacity: inViewLeft ? 1 : 0,
                 x: inViewLeft ? 0 : -100,
+                y: 0
               },
               ref: refLeft,
             };
           } else if (index === 1) {
             animationProps = {
               ...animationProps,
-              initial: { opacity: 0, y: 50 }, // Animasi dari bawah
+              initial: { opacity: 0, y: 50, x:0 }, // Animasi dari bawah
               animate: {
                 opacity: inViewCenter ? 1 : 0,
                 y: inViewCenter ? 0 : 50,
+                x:0
               },
               ref: refCenter,
             };
           } else if (index === 2) {
             animationProps = {
               ...animationProps,
-              initial: { opacity: 0, x: 100 }, // Animasi dari kanan
+              initial: { opacity: 0, x: 100, y:0 }, // Animasi dari kanan
               animate: {
                 opacity: inViewRight ? 1 : 0,
                 x: inViewRight ? 0 : 100,
+                y: 0
               },
               ref: refRight,
             };

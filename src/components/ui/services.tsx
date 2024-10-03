@@ -4,10 +4,15 @@ import { useInView } from "react-intersection-observer";
 import { useNavigate } from "@tanstack/react-router";
 
 export const Services = () => {
+
   const navigate = useNavigate();
-  const handleServiceClick = (serviceTitle: string) => {
+  const handleServiceClick = () => {
     navigate({ to: "/detailservice" });
   };
+  const { ref: refService, inView: inViewService } = useInView({
+    triggerOnce: false,
+    threshold: 0.1, // Threshold diatur ke 1
+  })
 
   return (
     <div
@@ -19,10 +24,6 @@ export const Services = () => {
       </div>
       <div className="grid grid-cols-3 px-40 py-10 gap-10">
         {services.map((service, index) => {
-          const { ref: refService, inView: inViewService } = useInView({
-            triggerOnce: false,
-            threshold: 0.1, // Threshold diatur ke 1
-          });
 
           return (
             <motion.div
@@ -35,7 +36,7 @@ export const Services = () => {
                 x: inViewService ? 0 : 100,
               }} // Fade in dari kanan
               transition={{ duration: 0.3, delay: index * 0.1 }} // Durasi dengan penundaan
-              onClick={() => handleServiceClick(service.title)} // Panggil handler saat diklik
+              onClick={() => handleServiceClick()} // Panggil handler saat diklik
             >
               <div className="overflow-hidden">
                 <img
